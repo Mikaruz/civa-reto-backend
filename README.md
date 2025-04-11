@@ -18,10 +18,10 @@ Este proyecto forma parte de un reto técnico para practicante FullStack. Incluy
 
 ## 📦 Endpoints disponibles
 
-- `GET /bus?page=1`  
+- `GET api/bus?page=1`  
   Devuelve la lista de todos los buses registrados con paginación.
 
-- `GET /bus/{id}`  
+- `GET api/bus/{id}`  
   Devuelve la información detallada de un bus por su ID.
 
 ---
@@ -81,8 +81,7 @@ Este proyecto forma parte de un reto técnico para practicante FullStack. Incluy
 🔧 Variables de entorno
 
 ```bash
-spring.datasource.url=jdbc:mysql://localhost:3306/civa
-spring.datasource.username=tu_usuario
-spring.datasource.password=tu_contraseña
-spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url = jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+spring.datasource.username=${DB_USER}
+spring.datasource.password=${DB_PASSWORD}
 ```
